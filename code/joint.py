@@ -103,6 +103,9 @@ def test(args):
     trans(args, rc_e1, rc_e2, rc_decoder, c_e1, c_e2, c_decoder)
 
 if __name__=='__main__':
+    """shell
+    python joint.py --load_rc /home/aailyk057pku/winter-camp-pek/model/checkpoint --load_c /home/aailyk057pku/winter-camp-pek/model/checkpoint_40000
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument('--root', default='data_joint')
     parser.add_argument('--load_rc', default='')
@@ -118,3 +121,4 @@ if __name__=='__main__':
     args = parser.parse_args()
 
     test(args)
+    
